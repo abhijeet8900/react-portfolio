@@ -21,7 +21,8 @@ class BackToTop extends React.Component {
     }
 
     render(){
-        return <a href="#" className="back-to-top animated"><i className="fa fa-chevron-up"></i></a>;
+        // return <a href="#" className="back-to-top animated"><i className="fa fa-chevron-up"></i></a>;
+        return <a href="#top" className="back-to-top animated"><i className="fa fa-chevron-up"></i></a>;
     }
 }
 
