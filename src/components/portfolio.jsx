@@ -29,25 +29,26 @@ class Portfolio extends React.Component {
                       <div className="work-img">
                         <img src={this.images[showCaseImages]} alt="" className="img-fluid" />
                       </div>
-                      <div className="work-content">
-                        <div className="row">
-                          <div className="col-sm-8">
-                            <h2 className="w-title">{item.title}</h2>
-                            <div className="w-more">
-                              <span className="w-ctegory">{item.short_description}</span>
-                            </div>
+                    </a>
+                    <div className="work-content">
+                      <div className="row">
+                        <div className="col-sm-8">
+                          <h2 className="w-title">{item.title}</h2>
+                          <div className="w-more">
+                            <span className="w-ctegory">{item.short_description}</span>
                           </div>
-                          <div className="col-sm-4">
-                            <div className="w-more">
-                              <a href={item.link}>
+                        </div>
+                        <div className="col-sm-4">
+                          <div className="w-more">
+                            <a href={item.link}>
                               <span className="w-ctegory">View Project</span>
-                                {/* <span className="ion-ios-eye-outline"></span> */}
-                              </a>
-                            </div>
+                              {/* <span className="ion-ios-eye-outline"></span> */}
+                            </a>
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </div>
+
                     {/* {showCaseImages.map((image) => {
                       return (
                         <a href={this.images[image]} data-lightbox="gallery-vmarine" style={{ display: "none" }}>
