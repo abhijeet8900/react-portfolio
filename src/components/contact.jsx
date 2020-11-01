@@ -1,13 +1,11 @@
 import React from "react";
 import imageOverlay from "../img/earth.jpg";
+import getInformation from "../information_loader";
 
 class Contact extends React.Component {
   render() {
     return (
-      <section
-        className="paralax-mf footer-paralax bg-image sect-mt4 route"
-        style={{ backgroundImage: "url(" + imageOverlay + ")" }}
-      >
+      <section className="paralax-mf footer-paralax bg-image sect-mt4 route" style={{ backgroundImage: "url(" + imageOverlay + ")" }}>
         <div className="overlay-mf"></div>
         <div className="container">
           <div className="row">
@@ -17,17 +15,11 @@ class Contact extends React.Component {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="title-box-2">
-                        <h5 className="title-left">Send A Message</h5>
+                        <h5 className="title-left">Send A Mail</h5>
                       </div>
                       <div>
-                        <form
-                          action="https://formspree.io/xdoeonlo"
-                          method="POST"
-                          className="contactForm"
-                        >
-                          <div id="sendmessage">
-                            Your message has been sent. Thank you!
-                          </div>
+                        <form action={"mailto:" + getInformation("email_address")} method="POST" target="_blank" className="contactForm">
+                          <div id="sendmessage">Your message has been sent. Thank you!</div>
                           <div id="errormessage"></div>
                           <div className="row">
                             <div className="col-md-12 mb-3">
@@ -80,17 +72,13 @@ class Contact extends React.Component {
                                   rows="5"
                                   data-rule="required"
                                   data-msg="Please write something for us"
-                                  placeholder="Message"
-                                ></textarea>
+                                  placeholder="Message"></textarea>
                                 <div className="validation"></div>
                               </div>
                             </div>
                             <div className="col-md-12">
-                              <button
-                                type="submit"
-                                className="button button-a button-big button-rouded"
-                              >
-                                Send Message
+                              <button type="submit" className="button button-a button-big button-rouded">
+                                Mail
                               </button>
                             </div>
                           </div>
@@ -102,55 +90,31 @@ class Contact extends React.Component {
                         <h5 className="title-left">Get in Touch</h5>
                       </div>
                       <div className="more-info">
-                        <p className="lead">
-                          Whether you want to get in touch, talk about a project
-                          collaboration, or just say hi, I'd love to hear from
-                          you.
-                          <br />
-                          Simply fill the from and send me an email.
-                        </p>
-                        {/* <!-- <ul class="list-ico">
-                                <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                                <li><span class="ion-email"></span> contact@example.com</li>
-                                </ul> --> */}
+                        {getInformation("get_in_touch_paragraph").map((content, index) => {
+                          return (
+                            <p className="lead" key={index}>
+                              {content}
+                            </p>
+                          );
+                        })}
+                        <ul class="list-ico">
+                                <li><span class="ion-ios-location"></span>{getInformation("address")}</li>
+                                <li><span class="ion-ios-telephone"></span> {getInformation("phone1")}</li>
+                                <li><span class="ion-email"></span> {getInformation("email_address")}</li>
+                                </ul> 
                       </div>
                       <div className="socials">
-                        <ul>
-                          <li>
-                            <a
-                              href="#dummy"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                      <ul>
+                      {getInformation("links").map(item =>{
+                        return (<li>
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">
                               <span className="ico-circle">
-                                <i className="ion-social-codepen"></i>
+                                <i className={item.id ? "ion-social-"+item.id : "ion-link"}></i>
                               </span>
                             </a>
-                          </li>
-                          <li>
-                            <a
-                                 href="#dummy"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="ico-circle">
-                                <i className="ion-social-github"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                                  href="#dummy"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="ico-circle">
-                                <i className="ion-social-linkedin"></i>
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
+                          </li>)
+                      })}
+                      </ul>
                       </div>
                     </div>
                   </div>
@@ -163,8 +127,7 @@ class Contact extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-sm-12">
-                <div className="copyright-box">
-                </div>
+                <div className="copyright-box"></div>
               </div>
             </div>
           </div>

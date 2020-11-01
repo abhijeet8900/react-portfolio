@@ -1,6 +1,7 @@
 import React from "react";
 import "./stars.scss";
 import Typed from "react-typed";
+import getInformation from "../information_loader";
 
 class Intro extends React.Component {
   render() {
@@ -14,16 +15,12 @@ class Intro extends React.Component {
         <div className="intro-content display-table">
           <div className="table-cell">
             <div className="container">
-              <h1 className="intro-title mb-4">Hello, I am Abhijeet</h1>
+              <h1 className="intro-title mb-4">Hello, I am {getInformation("name")}</h1>
               <p className="intro-subtitle">
                 <span className="text-slider-items"></span>
                 <strong className="text-slider">
                   <Typed
-                    strings={[
-                      "Front End Developer",
-                      "Back End Developer",
-                      "Software Engineer"
-                    ]}
+                    strings={getInformation("professions")}
                     typeSpeed={80}
                     backDelay={1100}
                     backSpeed={30}

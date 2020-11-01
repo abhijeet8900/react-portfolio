@@ -1,0 +1,85 @@
+{
+  "name": "Abhijeet",
+  "full_name": "Abhijeet Tilekar",
+  "professions": [
+    "Front End Developer",
+    "ServiceNow Developer",
+    "Salesforce Developer"
+  ],
+  "about": [
+    "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+    "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+    "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+  ],
+  "education": [{
+      "from": "2013",
+      "to": "2016",
+      "course": "Diploma in Computer Engineering",
+      "institute": "KES Polytechnic, Lohegaon"
+    },
+    {
+      "from": "2016",
+      "to": "2019",
+      "course": "B.Tech",
+      "institute": "JSPM, Wagholi"
+    }
+  ],
+  "skills": [{
+      "name": "ServiceNow",
+      "proficiency_percentage": "85"
+    }, {
+      "name": "Salesforce",
+      "proficiency_percentage": "60"
+    }, {
+      "name": "ReactJS",
+      "proficiency_percentage": "80"
+    },
+    {
+      "name": "React Natvie",
+      "proficiency_percentage": "85"
+    }
+  ],
+  "portfolio": {
+    "content": "Portfolio Conents",
+    "show_case": [{
+        "title": "Show Case 1",
+        "short_description": "Show Case 1 Description",
+        "link": "https://github.com/Abhijeet-bluepineapple",
+        "images": "image1.jpg"
+      },
+      {
+        "title": "Show Case 2",
+        "short_description": "Show Case 2 Description",
+        "link": "https://github.com/Abhijeet-bluepineapple",
+        "images": "image4.jpg"
+      },
+      {
+        "title": "Show Case 3",
+        "short_description": "Show Case 3 Description",
+        "link": "https://github.com/Abhijeet-bluepineapple",
+        "images": "image3.jpg"
+      }
+    ]
+
+  },
+  "get_in_touch_paragraph": [
+    "Whether you want to get in touch, talk about a project collaboration, or just say hi, I 'd love to hear from you.",
+    "Simply fill the from and send me an email."
+  ],
+  "links": [{
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/abhijeet8900/"
+  }, {
+    "id": "facebook",
+    "name": "Facebook",
+    "link": "https://www.facebook.com/profile.php?id=100006420033159"
+  }, {
+    "id": "github",
+    "name": "GitHub",
+    "link": "https://github.com/abhijeet8900"
+  }],
+  "address": "Dighi, Pune - 411015",
+  "phone1": "9657663844",
+  "email_address": "abhijeet8900@gmail.com"
+}
